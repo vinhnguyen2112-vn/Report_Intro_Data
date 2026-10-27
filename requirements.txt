@@ -1,0 +1,10 @@
+@'
+jupyter-book
+pandas
+pyarrow
+plotly
+altair
+itables
+psutil
+matplotlib
+'@
