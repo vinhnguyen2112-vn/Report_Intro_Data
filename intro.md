@@ -28,7 +28,7 @@ when the book is compiled:
 
 | Full Name | Student ID 
 | :--- | :--- 
-| Nguyễn Vĩnh Nguyên | 2412740
+| Nguyễn Vĩnh Nguyên | 24127470
 | Trương Phan Minh Hằng | 24127033 
 | Huỳnh Thị Yến Vy| 24127594 
 | Nguyễn Trần Trọng Nhân | 24127092 

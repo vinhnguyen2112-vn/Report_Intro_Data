@@ -7,3 +7,4 @@ itables
 psutil
 matplotlib
 sphinx-proof
+sphinxcontrib-mermaid
