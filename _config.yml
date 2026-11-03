@@ -1,0 +1,30 @@
+title: "arXiv Project"
+author: "Vinh Nguyen"
+logo: ""  # đường dẫn logo nếu có
+
+execute:
+  execute_notebooks: auto          # Tự động chạy notebook khi build
+  timeout: 600                     # Timeout cho mỗi cell (giây)
+  allow_errors: false
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - dollarmath
+    - linkify
+    - substitution
+
+bibtex_bibfiles:
+  - references.bib                 # File BibTeX cho trích dẫn
+
+repository:
+  url: https://github.com/<user>/<repo>
+  branch: main
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+
+sphinx:
+  extra_extensions:
+    - sphinx_proof               # Nếu cần

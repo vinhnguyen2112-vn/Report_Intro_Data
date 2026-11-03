@@ -1,8 +1,32 @@
-@'
-_build/
+# Python virtual environment
 .venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Secret files
+.env
+.env.*
+*.pem
+
+# Editor
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# crawl data
+**/data/
+
+# Python virtual environment
+.venv/
+
+# Jupyter Book build output
+_build/
+
+# Python cache
 __pycache__/
 *.py[cod]
-.ipynb_checkpoints/
-.DS_Store
-'@ 

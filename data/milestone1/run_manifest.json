@@ -1,0 +1,17 @@
+[
+  {
+    "arxiv_id": "2310.12345",
+    "version": "v1",
+    "download_status": "success",
+    "source_type": "tar.gz",
+    "raw_size_bytes": 524288,
+    "extracted_size_bytes": 102400,
+    "num_tex_files": 3,
+    "num_bib_files": 1,
+    "download_time_sec": 2.15,
+    "extract_time_sec": 0.08,
+    "num_references_crawled": 42,
+    "num_references_with_arxiv_id": 28,
+    "ref_crawl_time_sec": 3.5
+  }
+]

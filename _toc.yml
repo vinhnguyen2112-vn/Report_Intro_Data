@@ -1,0 +1,23 @@
+format: jb-book
+root: intro
+
+parts:
+  - caption: "arXiv Project"
+    chapters:
+      - file: milestone1/index
+        title: "Milestone 1 — Data Crawling"
+        sections:
+          - file: milestone1/intro
+            title: "Introduction"
+          - file: milestone1/data_sources_tools
+            title: "Data Sources and Tools"
+          - file: milestone1/implementation
+            title: "Implementation Process"
+          - file: milestone1/data_statistics
+            title: "Data Statistics and Analysis"
+          - file: milestone1/performance
+            title: "Performance Benchmarking"
+          - file: milestone1/discussion
+            title: "Discussion and Limitations"
+          - file: milestone1/appendix
+            title: "Appendix"

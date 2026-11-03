@@ -1,0 +1,1404 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hướng Dẫn Nội Dung Từng Tệp — Cây Cấu Trúc Report Milestone 1 &#8212; arXiv Project</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=8c6b312c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'role_file';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">arXiv Project</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    arXiv Project
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">arXiv Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="milestone1/index.html">Milestone 1 — Data Crawling</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="milestone1/data_sources_tools.html">Data Sources and Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="milestone1/appendix.html">Appendix</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/<user>/<repo>" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/<user>/<repo>/issues/new?title=Issue%20on%20page%20%2Frole_file.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/role_file.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Hướng Dẫn Nội Dung Từng Tệp — Cây Cấu Trúc Report Milestone 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tong-quan-cay-cau-truc">Tổng quan cây cấu trúc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cac-file-cau-hinh-goc">1. Các file cấu hình gốc</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#config-yml"><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toc-yml"><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gitignore"><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-txt"><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references-bib"><code class="docutils literal notranslate"><span class="pre">references.bib</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readme-md"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-md"><code class="docutils literal notranslate"><span class="pre">intro.md</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thu-muc-data-milestone1-du-lieu-tho">2. Thư mục <code class="docutils literal notranslate"><span class="pre">data/milestone1/</span></code> — Dữ liệu thô</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discovery-log-json"><code class="docutils literal notranslate"><span class="pre">discovery_log.json</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-manifest-json"><code class="docutils literal notranslate"><span class="pre">run_manifest.json</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resource-samples-csv"><code class="docutils literal notranslate"><span class="pre">resource_samples.csv</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#du-report-txt"><code class="docutils literal notranslate"><span class="pre">du_report.txt</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-v-output-txt"><code class="docutils literal notranslate"><span class="pre">time_v_output.txt</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thu-muc-milestone1-noi-dung-report">3. Thư mục <code class="docutils literal notranslate"><span class="pre">milestone1/</span></code> — Nội dung Report</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-md"><code class="docutils literal notranslate"><span class="pre">index.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources-tools-md"><code class="docutils literal notranslate"><span class="pre">data_sources_tools.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-md"><code class="docutils literal notranslate"><span class="pre">implementation.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-statistics-ipynb"><code class="docutils literal notranslate"><span class="pre">data_statistics.ipynb</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-ipynb"><code class="docutils literal notranslate"><span class="pre">performance.ipynb</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion-md"><code class="docutils literal notranslate"><span class="pre">discussion.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-md"><code class="docutils literal notranslate"><span class="pre">appendix.md</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thu-muc-report-utils-module-ho-tro">4. Thư mục <code class="docutils literal notranslate"><span class="pre">report_utils/</span></code> — Module hỗ trợ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#init-py"><code class="docutils literal notranslate"><span class="pre">__init__.py</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loaders-py"><code class="docutils literal notranslate"><span class="pre">loaders.py</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metrics-py"><code class="docutils literal notranslate"><span class="pre">metrics.py</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plots-py"><code class="docutils literal notranslate"><span class="pre">plots.py</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tom-tat-vai-tro-tung-file">5. Tóm tắt vai trò từng file</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="huong-dan-noi-dung-tung-tep-cay-cau-truc-report-milestone-1">
+<h1>Hướng Dẫn Nội Dung Từng Tệp — Cây Cấu Trúc Report Milestone 1<a class="headerlink" href="#huong-dan-noi-dung-tung-tep-cay-cau-truc-report-milestone-1" title="Link to this heading">#</a></h1>
+<p><img alt="Cây cấu trúc project" src="_images/media_1793126430030.png" /></p>
+<hr class="docutils" />
+<section id="tong-quan-cay-cau-truc">
+<h2>Tổng quan cây cấu trúc<a class="headerlink" href="#tong-quan-cay-cau-truc" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Report_Intro_Data/
+├── .github/                    # CI/CD deploy Jupyter Book lên GitHub Pages
+├── data/milestone1/            # Dữ liệu thô phục vụ sinh bảng/biểu tự động
+│   ├── discovery_log.json
+│   ├── du_report.txt
+│   ├── resource_samples.csv
+│   ├── run_manifest.json
+│   └── time_v_output.txt
+├── milestone1/                 # Nội dung chính của report
+│   ├── index.md
+│   ├── data_sources_tools.md
+│   ├── implementation.md
+│   ├── data_statistics.ipynb
+│   ├── performance.ipynb
+│   ├── discussion.md
+│   ├── appendix.md
+│   └── report_utils/          # Module Python hỗ trợ sinh biểu đồ/thống kê
+│       ├── __init__.py
+│       ├── loaders.py
+│       ├── metrics.py
+│       └── plots.py
+├── _config.yml
+├── _toc.yml
+├── .gitignore
+├── intro.md
+├── README.md
+├── references.bib
+└── requirements.txt
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="cac-file-cau-hinh-goc">
+<h2>1. Các file cấu hình gốc<a class="headerlink" href="#cac-file-cau-hinh-goc" title="Link to this heading">#</a></h2>
+<section id="config-yml">
+<h3><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code><a class="headerlink" href="#config-yml" title="Link to this heading">#</a></h3>
+<p>Cấu hình chính của Jupyter Book.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Intro</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Science</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">Project</span><span class="nv"> </span><span class="s">Report"</span>
+<span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="s">"Nhóm</span><span class="nv"> </span><span class="s">XX"</span>
+<span class="nt">logo</span><span class="p">:</span><span class="w"> </span><span class="s">""</span><span class="w">  </span><span class="c1"># đường dẫn logo nếu có</span>
+
+<span class="nt">execute</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">execute_notebooks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auto</span><span class="w">          </span><span class="c1"># Tự động chạy notebook khi build</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span><span class="w">                     </span><span class="c1"># Timeout cho mỗi cell (giây)</span>
+<span class="w">  </span><span class="nt">allow_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="nt">parse</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">myst_enable_extensions</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">colon_fence</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dollarmath</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linkify</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">substitution</span>
+
+<span class="nt">bibtex_bibfiles</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">references.bib</span><span class="w">                 </span><span class="c1"># File BibTeX cho trích dẫn</span>
+
+<span class="nt">repository</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/&lt;user&gt;/&lt;repo&gt;</span>
+<span class="w">  </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+
+<span class="nt">html</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">use_issues_button</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">use_repository_button</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">sphinx</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">extra_extensions</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sphinx_proof</span><span class="w">               </span><span class="c1"># Nếu cần</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="toc-yml">
+<h3><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code><a class="headerlink" href="#toc-yml" title="Link to this heading">#</a></h3>
+<p>Mục lục — quyết định <strong>thứ tự và cấu trúc</strong> các trang trong book.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jb-book</span>
+<span class="nt">root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro</span>
+
+<span class="nt">parts</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="s">"Milestone</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Crawling"</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">milestone1/index</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">milestone1/data_sources_tools</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">milestone1/implementation</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">milestone1/data_statistics</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">milestone1/performance</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">milestone1/discussion</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">milestone1/appendix</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="gitignore">
+<h3><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code><a class="headerlink" href="#gitignore" title="Link to this heading">#</a></h3>
+<div class="highlight-gitignore notranslate"><div class="highlight"><pre><span></span>_build/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="requirements-txt">
+<h3><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#requirements-txt" title="Link to this heading">#</a></h3>
+<p>Các package cần cài để <strong>build</strong> Jupyter Book và chạy notebook.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span><span class="o">&gt;=</span><span class="mf">1.0</span>
+<span class="n">matplotlib</span>
+<span class="n">pandas</span>
+<span class="n">numpy</span>
+<span class="n">seaborn</span>
+<span class="n">psutil</span>
+<span class="n">tabulate</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="references-bib">
+<h3><code class="docutils literal notranslate"><span class="pre">references.bib</span></code><a class="headerlink" href="#references-bib" title="Link to this heading">#</a></h3>
+<p>File BibTeX chứa <strong>tất cả trích dẫn</strong> dùng trong report.</p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@misc</span><span class="p">{</span><span class="nl">arxiv_api</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{arXiv API User's Manual}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">url</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{https://info.arxiv.org/help/api/user-manual.html}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{2024}</span>
+<span class="p">}</span>
+
+<span class="nc">@misc</span><span class="p">{</span><span class="nl">arxiv_py</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{Lukas Schwab}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{arxiv.py — Python wrapper for the arXiv API}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">url</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{https://github.com/lukasschwab/arxiv.py}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{2026}</span>
+<span class="p">}</span>
+
+<span class="nc">@misc</span><span class="p">{</span><span class="nl">semantic_scholar_api</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{Semantic Scholar Academic Graph API}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">url</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{https://api.semanticscholar.org/api-docs/}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{2024}</span>
+<span class="p">}</span>
+
+<span class="c">% Thêm các nguồn khác: OAI-PMH, Sickle, Kaggle dataset, S3 bulk access...</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="readme-md">
+<h3><code class="docutils literal notranslate"><span class="pre">README.md</span></code><a class="headerlink" href="#readme-md" title="Link to this heading">#</a></h3>
+<p>Hướng dẫn <strong>setup và chạy</strong> (không phải nội dung report).</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Intro to Data Science — Project Report</span>
+
+<span class="gu">## Thành viên nhóm</span>
+| MSSV | Họ tên | Vai trò |
+
+<span class="gu">## Cài đặt môi trường</span>
+<span class="k">-</span><span class="w"> </span>Python version yêu cầu
+<span class="k">-</span><span class="w"> </span><span class="sb">`pip install -r requirements.txt`</span>
+
+<span class="gu">## Build Jupyter Book</span>
+<span class="k">-</span><span class="w"> </span><span class="sb">`jupyter-book build .`</span>
+<span class="k">-</span><span class="w"> </span>Mở <span class="sb">`_build/html/index.html`</span> để xem local
+
+<span class="gu">## Deploy</span>
+<span class="k">-</span><span class="w"> </span>Push lên branch <span class="sb">`main`</span> → GitHub Actions tự deploy lên GitHub Pages
+
+<span class="gu">## Liên kết</span>
+<span class="k">-</span><span class="w"> </span>Source code repo: [link]
+<span class="k">-</span><span class="w"> </span>Report (GitHub Pages): [link]
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="intro-md">
+<h3><code class="docutils literal notranslate"><span class="pre">intro.md</span></code><a class="headerlink" href="#intro-md" title="Link to this heading">#</a></h3>
+<p>Trang chủ của toàn bộ Jupyter Book (root trong <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>).</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Báo Cáo Project — Nhập Môn Khoa Học Dữ Liệu</span>
+
+Giới thiệu tổng quan:
+<span class="k">-</span><span class="w"> </span>Mô tả project: crawling, parsing, machine learning trên arXiv
+<span class="k">-</span><span class="w"> </span>Thông tin nhóm (tên, MSSV, phân công)
+<span class="k">-</span><span class="w"> </span>Tóm tắt ngắn gọn nội dung từng milestone
+<span class="k">-</span><span class="w"> </span>Liên kết đến source code repository
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="thu-muc-data-milestone1-du-lieu-tho">
+<h2>2. Thư mục <code class="docutils literal notranslate"><span class="pre">data/milestone1/</span></code> — Dữ liệu thô<a class="headerlink" href="#thu-muc-data-milestone1-du-lieu-tho" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>[!IMPORTANT]
+Các file trong thư mục này là <strong>nguồn dữ liệu</strong> để notebook đọc vào và <strong>sinh bảng/biểu đồ tự động</strong> khi build. Không paste screenshot!</p>
+</div></blockquote>
+<section id="discovery-log-json">
+<h3><code class="docutils literal notranslate"><span class="pre">discovery_log.json</span></code><a class="headerlink" href="#discovery-log-json" title="Link to this heading">#</a></h3>
+<p>Log quá trình <strong>entry discovery</strong> — dùng trong <code class="docutils literal notranslate"><span class="pre">data_statistics.ipynb</span></code>.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"arxiv_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2310.12345"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Author A"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Author B"</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"num_versions"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"cs.AI"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cs.CL"</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"submission_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-10-18"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"discovery_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arxiv_api"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"discovery_time_sec"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.23</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"arxiv_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2310.12346"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Nội dung:</strong> Mỗi entry gồm arXiv ID, metadata cơ bản, số version phát hiện, phương pháp discovery, thời gian xử lý, trạng thái (success/fail/pdf_only).</p>
+</section>
+<hr class="docutils" />
+<section id="run-manifest-json">
+<h3><code class="docutils literal notranslate"><span class="pre">run_manifest.json</span></code><a class="headerlink" href="#run-manifest-json" title="Link to this heading">#</a></h3>
+<p>Log quá trình <strong>download + extract</strong> từng version — dùng trong cả <code class="docutils literal notranslate"><span class="pre">data_statistics.ipynb</span></code> và <code class="docutils literal notranslate"><span class="pre">performance.ipynb</span></code>.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"arxiv_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2310.12345"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v1"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"download_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"source_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tar.gz"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"raw_size_bytes"</span><span class="p">:</span><span class="w"> </span><span class="mi">524288</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"extracted_size_bytes"</span><span class="p">:</span><span class="w"> </span><span class="mi">102400</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"num_tex_files"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"num_bib_files"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"download_time_sec"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.15</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"extract_time_sec"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.08</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"num_references_crawled"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"num_references_with_arxiv_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"ref_crawl_time_sec"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.5</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Nội dung:</strong> Mỗi entry = 1 version của 1 bài, ghi nhận trạng thái download, loại source, kích thước trước/sau loại hình ảnh, số file <code class="docutils literal notranslate"><span class="pre">.tex</span></code>/<code class="docutils literal notranslate"><span class="pre">.bib</span></code>, thời gian, thông tin reference crawl.</p>
+</section>
+<hr class="docutils" />
+<section id="resource-samples-csv">
+<h3><code class="docutils literal notranslate"><span class="pre">resource_samples.csv</span></code><a class="headerlink" href="#resource-samples-csv" title="Link to this heading">#</a></h3>
+<p>Dữ liệu <strong>lấy mẫu RAM/CPU</strong> định kỳ trong quá trình chạy — dùng trong <code class="docutils literal notranslate"><span class="pre">performance.ipynb</span></code>.</p>
+<div class="highlight-csv notranslate"><div class="highlight"><pre><span></span>timestamp,elapsed_sec,rss_mb,vms_mb,cpu_percent,phase
+2026-10-27T10:00:00,0.0,120.5,450.2,12.3,discovery
+2026-10-27T10:00:05,5.0,125.3,455.1,15.1,discovery
+2026-10-27T10:01:00,60.0,210.8,520.4,45.2,download
+2026-10-27T10:02:00,120.0,180.2,490.3,30.5,ref_crawl
+</pre></div>
+</div>
+<p><strong>Nội dung:</strong> Mẫu RAM (RSS, VMS), CPU qua từng mốc thời gian, gắn nhãn phase (discovery / download / ref_crawl) để vẽ biểu đồ memory footprint theo thời gian.</p>
+</section>
+<hr class="docutils" />
+<section id="du-report-txt">
+<h3><code class="docutils literal notranslate"><span class="pre">du_report.txt</span></code><a class="headerlink" href="#du-report-txt" title="Link to this heading">#</a></h3>
+<p>Kết quả <strong>disk usage</strong> — dùng trong <code class="docutils literal notranslate"><span class="pre">performance.ipynb</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># du -sh output hoặc tương đương</span>
+<span class="n">total_raw_download_bytes</span><span class="p">:</span> <span class="mi">1073741824</span>
+<span class="n">total_after_extract_bytes</span><span class="p">:</span> <span class="mi">209715200</span>
+<span class="n">total_final_corpus_bytes</span><span class="p">:</span> <span class="mi">209715200</span>
+<span class="n">num_papers</span><span class="p">:</span> <span class="mi">500</span>
+<span class="n">num_versions_total</span><span class="p">:</span> <span class="mi">1250</span>
+</pre></div>
+</div>
+<p><strong>Nội dung:</strong> Tổng dung lượng thô trước khi loại hình, dung lượng sau extract chỉ <code class="docutils literal notranslate"><span class="pre">.tex</span></code>/<code class="docutils literal notranslate"><span class="pre">.bib</span></code>, dung lượng corpus cuối cùng.</p>
+</section>
+<hr class="docutils" />
+<section id="time-v-output-txt">
+<h3><code class="docutils literal notranslate"><span class="pre">time_v_output.txt</span></code><a class="headerlink" href="#time-v-output-txt" title="Link to this heading">#</a></h3>
+<p>Output từ công cụ đo performance (ví dụ <code class="docutils literal notranslate"><span class="pre">/usr/bin/time</span> <span class="pre">-v</span></code> trên Linux/Colab) — dùng trong <code class="docutils literal notranslate"><span class="pre">performance.ipynb</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Command</span> <span class="n">being</span> <span class="n">timed</span><span class="p">:</span> <span class="s2">"python src/main.py"</span>
+<span class="n">Elapsed</span> <span class="p">(</span><span class="n">wall</span> <span class="n">clock</span><span class="p">)</span> <span class="n">time</span><span class="p">:</span> <span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">12</span>
+<span class="n">Maximum</span> <span class="n">resident</span> <span class="nb">set</span> <span class="n">size</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">):</span> <span class="mi">524288</span>
+<span class="n">Average</span> <span class="n">resident</span> <span class="nb">set</span> <span class="n">size</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">):</span> <span class="mi">0</span>
+<span class="n">Minor</span> <span class="p">(</span><span class="n">reclaiming</span> <span class="n">a</span> <span class="n">frame</span><span class="p">)</span> <span class="n">page</span> <span class="n">faults</span><span class="p">:</span> <span class="mi">131072</span>
+<span class="n">Voluntary</span> <span class="n">context</span> <span class="n">switches</span><span class="p">:</span> <span class="mi">45678</span>
+</pre></div>
+</div>
+<p><strong>Nội dung:</strong> Wall time tổng, peak RSS, page faults — phục vụ đo hiệu năng tổng thể trên Colab.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="thu-muc-milestone1-noi-dung-report">
+<h2>3. Thư mục <code class="docutils literal notranslate"><span class="pre">milestone1/</span></code> — Nội dung Report<a class="headerlink" href="#thu-muc-milestone1-noi-dung-report" title="Link to this heading">#</a></h2>
+<section id="index-md">
+<h3><code class="docutils literal notranslate"><span class="pre">index.md</span></code><a class="headerlink" href="#index-md" title="Link to this heading">#</a></h3>
+<p><strong>Trang mở đầu</strong> của phần Milestone 1.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Milestone 1 — Data Crawling</span>
+
+<span class="gu">## Tổng quan</span>
+<span class="k">-</span><span class="w"> </span>Mục tiêu: thu thập mã nguồn LaTeX từ arXiv
+<span class="k">-</span><span class="w"> </span>Dải ID được giao: XXXX–YYYY
+<span class="k">-</span><span class="w"> </span>Tóm tắt kết quả: X/Y bài thành công, Z versions, ...
+
+<span class="gu">## Mục lục phần này</span>
+<span class="k">-</span><span class="w"> </span>Nguồn dữ liệu &amp; công cụ
+<span class="k">-</span><span class="w"> </span>Triển khai chi tiết
+<span class="k">-</span><span class="w"> </span>Thống kê dữ liệu
+<span class="k">-</span><span class="w"> </span>Hiệu năng scraper
+<span class="k">-</span><span class="w"> </span>Thảo luận &amp; kết luận
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="data-sources-tools-md">
+<h3><code class="docutils literal notranslate"><span class="pre">data_sources_tools.md</span></code><a class="headerlink" href="#data-sources-tools-md" title="Link to this heading">#</a></h3>
+<p><strong>Nguồn dữ liệu và công cụ</strong> — phần lý thuyết/mô tả.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Nguồn Dữ Liệu &amp; Công Cụ</span>
+
+<span class="gu">## 1. Entry Discovery</span>
+<span class="k">-</span><span class="w"> </span>arXiv API: mô tả endpoint, tham số, cách dùng <span class="sb">`arxiv.py`</span> v4.x
+<span class="k">-</span><span class="w"> </span>OAI-PMH: endpoint mới, verb, <span class="sb">`Sickle`</span>
+<span class="k">-</span><span class="w"> </span>Kaggle Dataset: cấu trúc JSON lines, cách dùng <span class="sb">`pandas`</span>
+<span class="k">-</span><span class="w"> </span>Bảng so sánh 3 phương pháp
+
+<span class="gu">## 2. Full-Text Source Download</span>
+<span class="k">-</span><span class="w"> </span>Endpoint <span class="sb">`export.arxiv.org/src/{id}`</span>
+<span class="k">-</span><span class="w"> </span>Download bằng <span class="sb">`urllib`</span> / <span class="sb">`requests`</span>
+<span class="k">-</span><span class="w"> </span>Giải nén bằng <span class="sb">`tarfile`</span>, chỉ extract <span class="sb">`.tex`</span> + <span class="sb">`.bib`</span>
+<span class="k">-</span><span class="w"> </span>Xử lý edge cases: PDF-only, file đơn lẻ (không phải tar)
+
+<span class="gu">## 3. Reference Extraction</span>
+<span class="k">-</span><span class="w"> </span>Semantic Scholar API: endpoint, fields, response format
+<span class="k">-</span><span class="w"> </span>Trích xuất arXiv ID từ <span class="sb">`externalIds`</span>
+<span class="k">-</span><span class="w"> </span>Rate limiting &amp; retry strategy
+
+<span class="gu">## 4. Bảng tổng hợp thư viện</span>
+| Thư viện | Version | Mục đích |
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="implementation-md">
+<h3><code class="docutils literal notranslate"><span class="pre">implementation.md</span></code><a class="headerlink" href="#implementation-md" title="Link to this heading">#</a></h3>
+<p><strong>Chi tiết triển khai</strong> — mô tả kiến trúc code và luồng xử lý.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Triển Khai Chi Tiết</span>
+
+<span class="gu">## 1. Kiến trúc tổng thể</span>
+<span class="k">-</span><span class="w"> </span>Sơ đồ pipeline (Mermaid flowchart)
+<span class="k">-</span><span class="w"> </span>Mô tả từng module/script trong <span class="sb">`src/`</span>
+
+<span class="gu">## 2. Luồng xử lý chính</span>
+<span class="gu">### 2.1. Entry Discovery</span>
+<span class="k">-</span><span class="w"> </span>Input: dải arXiv ID
+<span class="k">-</span><span class="w"> </span>Gọi arXiv API → lấy metadata + số version
+<span class="k">-</span><span class="w"> </span>Output: <span class="sb">`discovery_log.json`</span>
+
+<span class="gu">### 2.2. Source Download &amp; Extract</span>
+<span class="k">-</span><span class="w"> </span>Lặp qua từng paper × từng version
+<span class="k">-</span><span class="w"> </span>Download từ <span class="sb">`export.arxiv.org/src/{id}v{n}`</span>
+<span class="k">-</span><span class="w"> </span>Extract chỉ <span class="sb">`.tex`</span>, <span class="sb">`.bib`</span> từ archive
+<span class="k">-</span><span class="w"> </span>Xử lý các loại source: tar.gz, gz (file đơn), PDF-only
+<span class="k">-</span><span class="w"> </span>Rate limiting: sleep ≥ 3s giữa các request
+
+<span class="gu">### 2.3. Reference Crawling</span>
+<span class="k">-</span><span class="w"> </span>Gọi Semantic Scholar API cho từng paper
+<span class="k">-</span><span class="w"> </span>Parse response, trích arXiv ID
+<span class="k">-</span><span class="w"> </span>Retry logic khi gặp 429
+
+<span class="gu">## 3. Xử lý lỗi &amp; edge cases</span>
+<span class="k">-</span><span class="w"> </span>Paper bị withdraw
+<span class="k">-</span><span class="w"> </span>Source là PDF-only → record rỗng
+<span class="k">-</span><span class="w"> </span>ID cũ trước 2007 (dạng archive/YYMMNNN)
+<span class="k">-</span><span class="w"> </span>Timeout, connection error → retry
+
+<span class="gu">## 4. Tổ chức dữ liệu đầu ra</span>
+<span class="k">-</span><span class="w"> </span>Cấu trúc thư mục corpus
+<span class="k">-</span><span class="w"> </span>Schema bảng <span class="sb">`papers`</span> và <span class="sb">`references`</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="data-statistics-ipynb">
+<h3><code class="docutils literal notranslate"><span class="pre">data_statistics.ipynb</span></code><a class="headerlink" href="#data-statistics-ipynb" title="Link to this heading">#</a></h3>
+<p><strong>Notebook thống kê dữ liệu</strong> — <strong>code cells sinh bảng/biểu đồ tự động</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 1: Import và load data</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="p">;</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">".."</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">report_utils.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_discovery_log</span><span class="p">,</span> <span class="n">load_run_manifest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">report_utils.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">compute_stats</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">report_utils.plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_category_dist</span><span class="p">,</span> <span class="n">plot_versions_hist</span>
+
+<span class="n">discovery</span> <span class="o">=</span> <span class="n">load_discovery_log</span><span class="p">(</span><span class="s2">"../data/milestone1/discovery_log.json"</span><span class="p">)</span>
+<span class="n">manifest</span>  <span class="o">=</span> <span class="n">load_run_manifest</span><span class="p">(</span><span class="s2">"../data/milestone1/run_manifest.json"</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 2: Thống kê tổng quan</span>
+<span class="c1"># - Tổng số bài được giao vs crawl thành công</span>
+<span class="c1"># - Tỷ lệ thành công (%)</span>
+<span class="c1"># - Tổng số versions crawled</span>
+<span class="c1"># - Số bài PDF-only / fail</span>
+<span class="c1"># → Xuất bảng bằng pandas DataFrame + tabulate</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 3: Phân bố số version mỗi bài</span>
+<span class="c1"># → Histogram: trục X = số versions, trục Y = số bài</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 4: Phân bố theo category (cs.AI, cs.CL, ...)</span>
+<span class="c1"># → Bar chart hoặc pie chart</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 5: Kích thước bài trước vs sau loại hình ảnh</span>
+<span class="c1"># → Box plot hoặc bar chart so sánh raw_size vs extracted_size</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 6: Thống kê references</span>
+<span class="c1"># - Tổng số references crawled</span>
+<span class="c1"># - Trung bình references/bài</span>
+<span class="c1"># - % references có arXiv ID</span>
+<span class="c1"># - Phân bố số references/bài → histogram</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 7: Tỷ lệ thành công crawl reference metadata</span>
+<span class="c1"># → Bar chart: success vs partial vs fail</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>[!TIP]
+Markdown cells trong notebook dùng để giải thích ý nghĩa từng biểu đồ/bảng. Giữ ngắn gọn, phân tích sâu để ở <code class="docutils literal notranslate"><span class="pre">discussion.md</span></code>.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="performance-ipynb">
+<h3><code class="docutils literal notranslate"><span class="pre">performance.ipynb</span></code><a class="headerlink" href="#performance-ipynb" title="Link to this heading">#</a></h3>
+<p><strong>Notebook đo hiệu năng</strong> — sinh biểu đồ running time &amp; memory footprint.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 1: Import và load</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">report_utils.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_resource_samples</span><span class="p">,</span> <span class="n">load_du_report</span><span class="p">,</span> <span class="n">load_time_v</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">report_utils.plots</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_memory_timeline</span><span class="p">,</span> <span class="n">plot_time_breakdown</span>
+
+<span class="n">samples</span>  <span class="o">=</span> <span class="n">load_resource_samples</span><span class="p">(</span><span class="s2">"../data/milestone1/resource_samples.csv"</span><span class="p">)</span>
+<span class="n">du</span>       <span class="o">=</span> <span class="n">load_du_report</span><span class="p">(</span><span class="s2">"../data/milestone1/du_report.txt"</span><span class="p">)</span>
+<span class="n">time_v</span>   <span class="o">=</span> <span class="n">load_time_v</span><span class="p">(</span><span class="s2">"../data/milestone1/time_v_output.txt"</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 2: Running Time</span>
+<span class="c1"># - Tổng wall time end-to-end</span>
+<span class="c1"># - Thời gian trung bình xử lý 1 bài</span>
+<span class="c1"># - Breakdown theo phase: discovery / download / ref_crawl</span>
+<span class="c1"># → Stacked bar chart hoặc pie chart</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 3: Phân bố thời gian xử lý mỗi bài</span>
+<span class="c1"># → Histogram hoặc box plot</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 4: Memory Footprint — Timeline</span>
+<span class="c1"># → Line chart: RSS (MB) theo thời gian, gắn nhãn phase</span>
+<span class="c1"># → Đánh dấu peak RAM</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 5: Tổng hợp Memory</span>
+<span class="c1"># - Peak RAM (từ time -v hoặc psutil)</span>
+<span class="c1"># - Average RAM (từ sampling)</span>
+<span class="c1"># → Bảng tổng hợp</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 6: Disk Usage</span>
+<span class="c1"># - Tổng download thô</span>
+<span class="c1"># - Sau extract (chỉ .tex + .bib)</span>
+<span class="c1"># - Corpus cuối cùng</span>
+<span class="c1"># → Bar chart so sánh</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cell 7: Bảng tổng hợp hiệu năng</span>
+<span class="c1"># | Metric               | Value          |</span>
+<span class="c1"># |----------------------|----------------|</span>
+<span class="c1"># | Total wall time      | HH:MM:SS       |</span>
+<span class="c1"># | Avg time/paper       | X.XX sec       |</span>
+<span class="c1"># | Peak RAM             | XXX MB         |</span>
+<span class="c1"># | Avg RAM              | XXX MB         |</span>
+<span class="c1"># | Final corpus size    | XXX MB         |</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="discussion-md">
+<h3><code class="docutils literal notranslate"><span class="pre">discussion.md</span></code><a class="headerlink" href="#discussion-md" title="Link to this heading">#</a></h3>
+<p><strong>Thảo luận và kết luận</strong>.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Thảo Luận &amp; Kết Luận</span>
+
+<span class="gu">## 1. Đánh giá kết quả</span>
+<span class="k">-</span><span class="w"> </span>Tỷ lệ crawl đạt được so với mục tiêu
+<span class="k">-</span><span class="w"> </span>Chất lượng dữ liệu: tính đầy đủ, tính nhất quán
+
+<span class="gu">## 2. Khó khăn gặp phải</span>
+<span class="k">-</span><span class="w"> </span>Các edge cases: PDF-only, withdraw, timeout
+<span class="k">-</span><span class="w"> </span>Rate limiting và cách xử lý
+<span class="k">-</span><span class="w"> </span>Vấn đề với arxiv.py version compatibility
+
+<span class="gu">## 3. Bài học kinh nghiệm</span>
+<span class="k">-</span><span class="w"> </span>Kỹ thuật xử lý rate limit hiệu quả
+<span class="k">-</span><span class="w"> </span>Tầm quan trọng của error handling &amp; retry
+<span class="k">-</span><span class="w"> </span>Cách tổ chức dữ liệu cho pipeline downstream
+
+<span class="gu">## 4. Hạn chế</span>
+<span class="k">-</span><span class="w"> </span>Những gì chưa xử lý được
+<span class="k">-</span><span class="w"> </span>Dữ liệu thiếu / không đầy đủ
+
+<span class="gu">## 5. Hướng cải thiện</span>
+<span class="k">-</span><span class="w"> </span>Tối ưu tốc độ crawl
+<span class="k">-</span><span class="w"> </span>Xử lý thêm edge cases
+<span class="k">-</span><span class="w"> </span>Chuẩn bị cho Milestone 2 (parsing)
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="appendix-md">
+<h3><code class="docutils literal notranslate"><span class="pre">appendix.md</span></code><a class="headerlink" href="#appendix-md" title="Link to this heading">#</a></h3>
+<p><strong>Phụ lục</strong> — thông tin bổ sung.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Phụ Lục</span>
+
+<span class="gu">## A. Bảng phân công công việc</span>
+| Thành viên | Nhiệm vụ | Ghi chú |
+
+<span class="gu">## B. Danh sách arXiv ID được giao</span>
+<span class="k">-</span><span class="w"> </span>Dải ID: từ ... đến ...
+<span class="k">-</span><span class="w"> </span>Tổng số: N bài
+
+<span class="gu">## C. Danh sách bài PDF-only / không crawl được</span>
+| arXiv ID | Lý do | Ghi chú |
+
+<span class="gu">## D. Cấu hình môi trường chạy</span>
+<span class="k">-</span><span class="w"> </span>Google Colab CPU-only
+<span class="k">-</span><span class="w"> </span>Python version, RAM, Disk
+
+<span class="gu">## E. Link tham khảo</span>
+<span class="k">-</span><span class="w"> </span>arXiv API docs
+<span class="k">-</span><span class="w"> </span>Semantic Scholar API docs
+<span class="k">-</span><span class="w"> </span>arxiv.py GitHub
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="thu-muc-report-utils-module-ho-tro">
+<h2>4. Thư mục <code class="docutils literal notranslate"><span class="pre">report_utils/</span></code> — Module hỗ trợ<a class="headerlink" href="#thu-muc-report-utils-module-ho-tro" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>[!IMPORTANT]
+Module này chứa các hàm Python được notebook import để <strong>load dữ liệu, tính toán, và vẽ biểu đồ</strong>. Tách riêng để code trong notebook gọn gàng và tái sử dụng được.</p>
+</div></blockquote>
+<section id="init-py">
+<h3><code class="docutils literal notranslate"><span class="pre">__init__.py</span></code><a class="headerlink" href="#init-py" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Đánh dấu report_utils là Python package</span>
+<span class="c1"># Có thể import convenience functions nếu cần</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="loaders-py">
+<h3><code class="docutils literal notranslate"><span class="pre">loaders.py</span></code><a class="headerlink" href="#loaders-py" title="Link to this heading">#</a></h3>
+<p>Hàm <strong>đọc và parse</strong> các file data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">"""Loader functions for milestone1 data files."""</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_discovery_log</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Load discovery_log.json → DataFrame."""</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_run_manifest</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Load run_manifest.json → DataFrame."""</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_resource_samples</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Load resource_samples.csv → DataFrame với timestamp parsed."""</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">"timestamp"</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_du_report</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Parse du_report.txt → dict of key-value pairs."""</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">":"</span> <span class="ow">in</span> <span class="n">line</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"#"</span><span class="p">):</span>
+                <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">":"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">result</span><span class="p">[</span><span class="n">key</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_time_v</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Parse time -v output → dict."""</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">":"</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+                <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">":"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">result</span><span class="p">[</span><span class="n">key</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="metrics-py">
+<h3><code class="docutils literal notranslate"><span class="pre">metrics.py</span></code><a class="headerlink" href="#metrics-py" title="Link to this heading">#</a></h3>
+<p>Hàm <strong>tính toán thống kê</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">"""Metric computation functions."""</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_crawl_summary</span><span class="p">(</span><span class="n">discovery</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Tính tỷ lệ thành công, số fail, PDF-only, ..."""</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">discovery</span><span class="p">)</span>
+    <span class="n">success</span> <span class="o">=</span> <span class="p">(</span><span class="n">discovery</span><span class="p">[</span><span class="s2">"status"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"success"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">"total_assigned"</span><span class="p">:</span> <span class="n">total</span><span class="p">,</span>
+        <span class="s2">"total_success"</span><span class="p">:</span> <span class="n">success</span><span class="p">,</span>
+        <span class="s2">"success_rate"</span><span class="p">:</span> <span class="n">success</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">"pdf_only"</span><span class="p">:</span> <span class="p">(</span><span class="n">discovery</span><span class="p">[</span><span class="s2">"status"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"pdf_only"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+        <span class="s2">"failed"</span><span class="p">:</span> <span class="p">(</span><span class="n">discovery</span><span class="p">[</span><span class="s2">"status"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"fail"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_size_stats</span><span class="p">(</span><span class="n">manifest</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Tính avg size trước/sau extract, ..."""</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">"avg_raw_size"</span><span class="p">:</span> <span class="n">manifest</span><span class="p">[</span><span class="s2">"raw_size_bytes"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="s2">"avg_extracted_size"</span><span class="p">:</span> <span class="n">manifest</span><span class="p">[</span><span class="s2">"extracted_size_bytes"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="s2">"size_reduction_pct"</span><span class="p">:</span> <span class="o">...</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_reference_stats</span><span class="p">(</span><span class="n">manifest</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Tính avg references/bài, % có arXiv ID, ..."""</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">"avg_refs_per_paper"</span><span class="p">:</span> <span class="n">manifest</span><span class="p">[</span><span class="s2">"num_references_crawled"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="s2">"avg_refs_with_arxiv"</span><span class="p">:</span> <span class="n">manifest</span><span class="p">[</span><span class="s2">"num_references_with_arxiv_id"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="s2">"ref_arxiv_coverage"</span><span class="p">:</span> <span class="o">...</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_time_stats</span><span class="p">(</span><span class="n">manifest</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Tính tổng/trung bình thời gian theo phase."""</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">"total_download_time"</span><span class="p">:</span> <span class="n">manifest</span><span class="p">[</span><span class="s2">"download_time_sec"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+        <span class="s2">"avg_download_time"</span><span class="p">:</span> <span class="n">manifest</span><span class="p">[</span><span class="s2">"download_time_sec"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="s2">"total_ref_crawl_time"</span><span class="p">:</span> <span class="n">manifest</span><span class="p">[</span><span class="s2">"ref_crawl_time_sec"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="plots-py">
+<h3><code class="docutils literal notranslate"><span class="pre">plots.py</span></code><a class="headerlink" href="#plots-py" title="Link to this heading">#</a></h3>
+<p>Hàm <strong>vẽ biểu đồ</strong> dùng <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> / <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">"""Plotting functions for milestone1 report."""</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_versions_histogram</span><span class="p">(</span><span class="n">discovery</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Histogram phân bố số version mỗi bài."""</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">discovery</span><span class="p">[</span><span class="s2">"num_versions"</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">discovery</span><span class="p">[</span><span class="s2">"num_versions"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span>
+            <span class="n">edgecolor</span><span class="o">=</span><span class="s2">"black"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Số versions"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Số bài báo"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Phân bố số version mỗi bài"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">fig</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_size_comparison</span><span class="p">(</span><span class="n">manifest</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Box plot so sánh kích thước trước/sau extract."""</span>
+    <span class="o">...</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_references_distribution</span><span class="p">(</span><span class="n">manifest</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Histogram số references mỗi bài."""</span>
+    <span class="o">...</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_memory_timeline</span><span class="p">(</span><span class="n">samples</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Line chart RSS theo thời gian, đánh dấu peak."""</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">samples</span><span class="p">[</span><span class="s2">"elapsed_sec"</span><span class="p">],</span> <span class="n">samples</span><span class="p">[</span><span class="s2">"rss_mb"</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">"RSS (MB)"</span><span class="p">)</span>
+    <span class="n">peak_idx</span> <span class="o">=</span> <span class="n">samples</span><span class="p">[</span><span class="s2">"rss_mb"</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Peak: </span><span class="si">{</span><span class="n">samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">peak_idx</span><span class="p">,</span><span class="w"> </span><span class="s1">'rss_mb'</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> MB"</span><span class="p">,</span>
+                <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">peak_idx</span><span class="p">,</span> <span class="s2">"elapsed_sec"</span><span class="p">],</span> <span class="n">samples</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">peak_idx</span><span class="p">,</span> <span class="s2">"rss_mb"</span><span class="p">]),</span>
+                <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"red"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Thời gian (giây)"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"RAM (MB)"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Memory Footprint theo thời gian"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">fig</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_time_breakdown</span><span class="p">(</span><span class="n">manifest</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Stacked bar hoặc pie chart breakdown thời gian theo phase."""</span>
+    <span class="o">...</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_disk_usage</span><span class="p">(</span><span class="n">du</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Bar chart so sánh dung lượng: raw → extracted → final."""</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tom-tat-vai-tro-tung-file">
+<h2>5. Tóm tắt vai trò từng file<a class="headerlink" href="#tom-tat-vai-tro-tung-file" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>File</p></th>
+<th class="head"><p>Loại</p></th>
+<th class="head"><p>Vai trò</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p></td>
+<td><p>Config</p></td>
+<td><p>Cấu hình Jupyter Book (title, execute, bibtex, …)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></p></td>
+<td><p>Config</p></td>
+<td><p>Mục lục, thứ tự các trang</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">intro.md</span></code></p></td>
+<td><p>Content</p></td>
+<td><p>Trang chủ book, giới thiệu project + nhóm</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">README.md</span></code></p></td>
+<td><p>Docs</p></td>
+<td><p>Hướng dẫn setup, build, deploy (không phải content report)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">references.bib</span></code></p></td>
+<td><p>Data</p></td>
+<td><p>BibTeX citations dùng trong report</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></p></td>
+<td><p>Config</p></td>
+<td><p>Dependencies để build book</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">discovery_log.json</span></code></p></td>
+<td><p>Data</p></td>
+<td><p>Log entry discovery → sinh thống kê</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">run_manifest.json</span></code></p></td>
+<td><p>Data</p></td>
+<td><p>Log download/extract/ref crawl → sinh thống kê + performance</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource_samples.csv</span></code></p></td>
+<td><p>Data</p></td>
+<td><p>Mẫu RAM/CPU định kỳ → vẽ memory timeline</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">du_report.txt</span></code></p></td>
+<td><p>Data</p></td>
+<td><p>Disk usage → bảng/biểu đồ dung lượng</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">time_v_output.txt</span></code></p></td>
+<td><p>Data</p></td>
+<td><p>Output <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">-v</span></code> → peak RAM, wall time</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">index.md</span></code></p></td>
+<td><p>Content</p></td>
+<td><p>Trang mở đầu Milestone 1, tổng quan kết quả</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">data_sources_tools.md</span></code></p></td>
+<td><p>Content</p></td>
+<td><p>Mô tả nguồn dữ liệu, API, thư viện</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">implementation.md</span></code></p></td>
+<td><p>Content</p></td>
+<td><p>Chi tiết triển khai, pipeline, xử lý lỗi</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">data_statistics.ipynb</span></code></p></td>
+<td><p>Content</p></td>
+<td><p><strong>Notebook</strong> sinh bảng/biểu đồ thống kê dữ liệu</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">performance.ipynb</span></code></p></td>
+<td><p>Content</p></td>
+<td><p><strong>Notebook</strong> sinh bảng/biểu đồ hiệu năng</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">discussion.md</span></code></p></td>
+<td><p>Content</p></td>
+<td><p>Thảo luận, khó khăn, bài học, kết luận</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">appendix.md</span></code></p></td>
+<td><p>Content</p></td>
+<td><p>Phụ lục: phân công, danh sách ID, cấu hình</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">loaders.py</span></code></p></td>
+<td><p>Utility</p></td>
+<td><p>Hàm load/parse các file data</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">metrics.py</span></code></p></td>
+<td><p>Utility</p></td>
+<td><p>Hàm tính toán thống kê</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plots.py</span></code></p></td>
+<td><p>Utility</p></td>
+<td><p>Hàm vẽ biểu đồ</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tong-quan-cay-cau-truc">Tổng quan cây cấu trúc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cac-file-cau-hinh-goc">1. Các file cấu hình gốc</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#config-yml"><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toc-yml"><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gitignore"><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-txt"><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references-bib"><code class="docutils literal notranslate"><span class="pre">references.bib</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readme-md"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-md"><code class="docutils literal notranslate"><span class="pre">intro.md</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thu-muc-data-milestone1-du-lieu-tho">2. Thư mục <code class="docutils literal notranslate"><span class="pre">data/milestone1/</span></code> — Dữ liệu thô</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discovery-log-json"><code class="docutils literal notranslate"><span class="pre">discovery_log.json</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-manifest-json"><code class="docutils literal notranslate"><span class="pre">run_manifest.json</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resource-samples-csv"><code class="docutils literal notranslate"><span class="pre">resource_samples.csv</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#du-report-txt"><code class="docutils literal notranslate"><span class="pre">du_report.txt</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-v-output-txt"><code class="docutils literal notranslate"><span class="pre">time_v_output.txt</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thu-muc-milestone1-noi-dung-report">3. Thư mục <code class="docutils literal notranslate"><span class="pre">milestone1/</span></code> — Nội dung Report</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-md"><code class="docutils literal notranslate"><span class="pre">index.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources-tools-md"><code class="docutils literal notranslate"><span class="pre">data_sources_tools.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-md"><code class="docutils literal notranslate"><span class="pre">implementation.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-statistics-ipynb"><code class="docutils literal notranslate"><span class="pre">data_statistics.ipynb</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-ipynb"><code class="docutils literal notranslate"><span class="pre">performance.ipynb</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion-md"><code class="docutils literal notranslate"><span class="pre">discussion.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-md"><code class="docutils literal notranslate"><span class="pre">appendix.md</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thu-muc-report-utils-module-ho-tro">4. Thư mục <code class="docutils literal notranslate"><span class="pre">report_utils/</span></code> — Module hỗ trợ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#init-py"><code class="docutils literal notranslate"><span class="pre">__init__.py</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loaders-py"><code class="docutils literal notranslate"><span class="pre">loaders.py</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metrics-py"><code class="docutils literal notranslate"><span class="pre">metrics.py</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plots-py"><code class="docutils literal notranslate"><span class="pre">plots.py</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tom-tat-vai-tro-tung-file">5. Tóm tắt vai trò từng file</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vinh Nguyen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

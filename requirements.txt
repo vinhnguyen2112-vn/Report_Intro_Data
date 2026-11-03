@@ -1,5 +1,4 @@
-@'
-jupyter-book
+jupyter-book<2
 pandas
 pyarrow
 plotly
@@ -7,4 +6,4 @@ altair
 itables
 psutil
 matplotlib
-'@
+sphinx-proof
