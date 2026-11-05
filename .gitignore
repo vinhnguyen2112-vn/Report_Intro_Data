@@ -5,8 +5,8 @@ venv/
 # Python cache
 __pycache__/
 *.pyc
-
-# Secret files
+*.pyo
+*.pyd
 .env
 .env.*
 *.pem
@@ -29,4 +29,4 @@ _build/
 
 # Python cache
 __pycache__/
-*.py[cod]
+*.py[cod]                       

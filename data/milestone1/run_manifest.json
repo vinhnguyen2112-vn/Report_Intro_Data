@@ -1,17 +1,31 @@
-[
-  {
-    "arxiv_id": "2310.12345",
-    "version": "v1",
-    "download_status": "success",
-    "source_type": "tar.gz",
-    "raw_size_bytes": 524288,
-    "extracted_size_bytes": 102400,
-    "num_tex_files": 3,
-    "num_bib_files": 1,
-    "download_time_sec": 2.15,
-    "extract_time_sec": 0.08,
-    "num_references_crawled": 42,
-    "num_references_with_arxiv_id": 28,
-    "ref_crawl_time_sec": 3.5
-  }
-]
+{
+  "total_papers": 20000,
+  "cached_papers": 20000,
+  "papers_with_tex": 17591,
+  "papers_without_tex": 2409,
+  "papers_failed": 0,
+  "total_wall_time_sec": 10.6737,
+  "tracemalloc_peak_heap_mb": 51.25,
+  "storage_metrics": {
+    "total_versions": 27481,
+    "total_raw_archive_bytes": 52220127343,
+    "total_raw_archive_human": "48.63 GB",
+    "total_uncompressed_bytes": 61166053733,
+    "total_uncompressed_human": "56.97 GB",
+    "total_kept_tex_bib_bytes": 4191327975,
+    "total_kept_tex_bib_human": "3.90 GB",
+    "total_saved_bytes_vs_uncompressed": 56974725758,
+    "total_saved_human_vs_uncompressed": "53.06 GB",
+    "storage_reduction_ratio_vs_uncompressed_pct": 93.15,
+    "storage_reduction_ratio_vs_raw_archive_pct": 91.97,
+    "total_tex_files": 89628,
+    "total_bib_files": 18912,
+    "total_kept_files": 108540
+  },
+  "output_paths": {
+    "papers_dir": "data\\output\\papers",
+    "download_status_json": "data\\output\\download_status.json",
+    "download_summary_json": "data\\output\\download_summary.json"
+  },
+  "completed_at_utc": "2026-11-03T09:32:59.362462+00:00"
+}
