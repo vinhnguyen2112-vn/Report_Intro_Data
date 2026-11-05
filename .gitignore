@@ -27,6 +27,10 @@ Thumbs.db
 # Jupyter Book build output
 _build/
 
+# Data folders
+data/milestone1/
+
+
 # Python cache
 __pycache__/
 *.py[cod]                       
