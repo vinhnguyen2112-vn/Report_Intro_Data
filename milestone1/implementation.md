@@ -43,8 +43,8 @@ flowchart TD
 
 ### 1. Module 1: Entry Discovery & Metadata Promber 1
 #### 1.1. Query Logic & Assigned ID Range Traversal
-- Batch querying strategy for assigned arXiv identifier ranges.
-- Metadata harvesting using arXiv API / OAI-PMH endpoints.
+##### 1.1.1. Purpose
+Entry discovery use to identify papers within the assigned ranges, retrieve their metadata, and determine the version history of each paper.
 
 #### 1.2. Version Detection Mechanism
 - Algorithms for detecting total published versions ($v_1, v_2, \dots, v_n$) per paper.
