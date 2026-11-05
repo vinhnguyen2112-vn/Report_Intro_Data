@@ -1,6 +1,0 @@
-# du -sh output hoặc tương đương
-total_raw_download_bytes: 1073741824
-total_after_extract_bytes: 209715200
-total_final_corpus_bytes: 209715200
-num_papers: 500
-num_versions_total: 1250
