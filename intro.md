@@ -35,7 +35,7 @@ when the book is compiled:
 
 ## Repository Links
 
-* **Source Code Repository:** [GitHub - Group Code Repo](https://github.com/vinhnguyen2112-vn/Group_Code_Repo)
+* **Source Code Repository:** [GitHub - Group Code Repo](https://github.com/bamibosua/Project_IntroData.git)
 * **Jupyter Book Repository:** [GitHub - Report Pages Repo](https://github.com/vinhnguyen2112-vn/Report_Intro_Data)
 
 ---

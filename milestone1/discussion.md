@@ -1,33 +1,28 @@
 # Discussion & Conclusion
 
-This chapter reflects on the execution of **Milestone 1**, evaluating our data acquisition results, reviewing technical challenges encountered during crawling, synthesizing key lessons learned, and outlining existing limitations alongside actionable directions for **Milestone 2**.
+This chapter interprets the result of milestone 1, **explains the challanges** we met while crawling and **describes how we solved them**, **states what we learned** from this milestone, **admits the limits** of the corpus, and describes how we will prepare for milestone 2.
+
 
 ---
 
-## 1. Evaluation of Results
-
-### 1.1. Crawl Success Rate & Coverage
-- **Target vs. Actual**: 
-  <!-- TODO: State your assigned target (e.g., 500 papers, ~1,200 versions) versus the actual number of successfully collected papers and versions. -->
-  - *Assigned Target*: 
-  - *Successfully Harvested*: [e.g., 482 / 500 papers (96.4% success rate)]
-  - *Total Versions Crawled*: 27481 versions 
-- **Crawl Success Rate**: 100% of the papers that were scrapped and had LaTeX source were successfully downloaded and processed.
-- **Storage Efficiency**:
-  <!-- TODO: Mention the reduction percentage after discarding binary/image files (.png, .jpg, .pdf) and keeping only .tex and .bib files. -->
-  
-
-### 1.2. Data Completeness & Quality
-- **LaTeX Source Quality**:
-  <!-- TODO: Comment on whether the extracted .tex and .bib files are complete and ready for parsing. -->
-  - The collected `.tex` and `.bib` files maintain original relative project structures, ensuring references and custom macros remain intact.
-- **Citation Graph Coverage**:
-  <!-- TODO: Mention how many references were retrieved and what percentage contained valid arXiv IDs. -->
-  - [e.g., ~65%] of retrieved references were successfully linked back to internal arXiv IDs via Semantic Scholar `externalIds`.
+## 1. Summary of Milestone 1 Results
+Every number in the table below have been calculated from the `run_mainifest.json` file and have taken from `data_statistics.ipynb` and `performance.ipynb`. 
+| Item | Result |
+|---|---|
+| Assigned paper IDs |  2609.12834 - 2609.17833 / 2608.09007 - 2608.14006 / 	2601.18156–2601.23155 / 	2511.11709–2511.16708|
+| Papers crawled successfully | 20000 papers (Rate success: 100%) |
+| Versions crawled in total | 27481 versions |
+| Versions with TeX source / PDF-only (empty record) | [N] / [N] |
+| Average paper size before / after removing figures | [x] MB / [x] MB ([x]% smaller) |
+| Average number of references per paper | [x] |
+| Share of references that have an arXiv ID | [x]% |
+| Reference-metadata success rate (average) | [x]% |
+| Total wall time / average time per paper | [x] h / [x] s |
+| Peak RAM / average RAM | [x] MB / [x] MB |
+| Peak disk / final output size | [x] GB / [x] GB |
 
 ---
-
-## 2. Challenges & Bottlenecks
+## 2. Explanation of Results 
 
 ### 2.1. Diverse Source Packaging & Edge Cases
 - **PDF-Only Submissions**:
